@@ -1,0 +1,27 @@
+#signup {
+    display: block;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} 
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    width: 25%;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+}

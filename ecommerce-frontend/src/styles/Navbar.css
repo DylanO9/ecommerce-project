@@ -1,0 +1,53 @@
+header {
+    display: block;
+    width: 100vw;
+    border: solid;
+    border-color: var(--line-color);
+    height: 8vh;
+}
+
+header ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto 3fr .25fr .25fr .25fr;
+    align-items: center;
+    margin: .5rem 2rem;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    color: black;
+    text-decoration: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    float: right;
+}
+
+.icon:visited {
+    color: inherit;
+}
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+
+#name {
+    font-family: "Almendra SC", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+    color: black;
+    -webkit-text-stroke: .5px rgb(73, 19, 19);
+    float: left;
+}
+
+

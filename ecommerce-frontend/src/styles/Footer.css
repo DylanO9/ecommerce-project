@@ -1,0 +1,9 @@
+footer {
+    bottom: 0;
+    width: 100vw;
+    border: solid 1px;
+    border-color: rgb(207, 206, 206);
+}
+footer ul {
+    list-style-type: none;
+}

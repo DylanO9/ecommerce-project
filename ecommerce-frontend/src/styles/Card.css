@@ -1,0 +1,19 @@
+.card {
+    cursor: pointer;
+    text-align: left;
+    list-style-type: none;
+}
+
+.card img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#price {
+    font-weight: bold;
+}

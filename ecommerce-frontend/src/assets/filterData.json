@@ -1,0 +1,56 @@
+{
+    "filters": {
+      "categories": [
+        { "value": 1, "full": "Men" },
+        { "value": 8, "full": "Women" },
+        { "value": 17, "full": "Jewellery" },
+        { "value": 18, "full": "Art" },
+        { "value": 19, "full": "Tech" },
+        { "value": 21, "full": "Home" },
+        { "value": 23, "full": "Beauty" },
+        { "value": 24, "full": "Sports equipment" },
+        { "value": 25, "full": "Transportation" },
+        { "value": 26, "full": "Other" },
+        { "value": 27, "full": "Books & magazines" },
+        { "value": 28, "full": "Film" },
+        { "value": 29, "full": "Music" }
+      ],
+      "conditions": [
+        { "value": "brand_new", "full": "Brand new" },
+        { "value": "used_like_new", "full": "Like new" },
+        { "value": "used_excellent", "full": "Used - Excellent" },
+        { "value": "used_good", "full": "Used - Good" },
+        { "value": "used_fair", "full": "Used - Fair" }
+      ],
+      "countries": [
+        { "value": "au", "full": "Australia" },
+        { "value": "de", "full": "Germany" },
+        { "value": "fr", "full": "France" },
+        { "value": "gb", "full": "United Kingdom" },
+        { "value": "it", "full": "Italy" },
+        { "value": "us", "full": "United States" }
+      ],
+      "colours": [
+        { "value": "black", "full": "Black" },
+        { "value": "grey", "full": "Grey" },
+        { "value": "white", "full": "White" },
+        { "value": "brown", "full": "Brown" },
+        { "value": "tan", "full": "Tan" },
+        { "value": "cream", "full": "Cream" },
+        { "value": "yellow", "full": "Yellow" },
+        { "value": "red", "full": "Red" },
+        { "value": "burgundy", "full": "Burgundy" },
+        { "value": "orange", "full": "Orange" },
+        { "value": "pink", "full": "Pink" },
+        { "value": "purple", "full": "Purple" },
+        { "value": "blue", "full": "Blue" },
+        { "value": "navy", "full": "Navy" },
+        { "value": "green", "full": "Green" },
+        { "value": "khaki", "full": "Khaki" },
+        { "value": "multi", "full": "Multi" },
+        { "value": "silver", "full": "Silver" },
+        { "value": "gold", "full": "Gold" }
+      ]
+    }
+  }
+  

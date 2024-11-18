@@ -1,0 +1,28 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.carousel ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.carousel li {
+    margin: .5rem;
+    cursor: pointer;
+    text-align: left;
+    list-style-type: none;
+}
+
+.carousel h2 span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+}

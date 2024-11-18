@@ -1,0 +1,14 @@
+#search {
+    width: 35vw;
+    border-radius: 1vw;
+    background-color: var(--light-background);
+    padding: .75rem;
+    margin-left: 10rem;
+    border: 1px solid black;
+    align-items: center;
+    display: flex;
+}
+
+#search span {
+    margin-left: .5rem;
+}
