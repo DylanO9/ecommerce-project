@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const usersRouter = require('./routes/users'); // Import the users routes
 const authRouter = require('./routes/auth'); // Import the auth routes
+const cartRouter = require('./routes/cart'); // Import the cart routes
 require('dotenv').config();
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(bodyParser.json()); // To parse incoming JSON requests
 // Use routes
 app.use('/api/users', usersRouter); // All routes in users.js are now prefixed with /api/users
 app.use('/api/users', authRouter); // All routes in auth.js are now prefixed with /api
+app.use('/api/cart', cartRouter); // All routes in cart.js are now prefixed with /api/cart
 
 // Start the server
 app.listen(PORT, () => {

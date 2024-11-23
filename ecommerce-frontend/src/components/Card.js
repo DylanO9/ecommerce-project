@@ -1,11 +1,23 @@
 import '../styles/Card.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Card(props) {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <li className="card">
+        <li 
+            className="card" 
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)}
+        >
             {/* display image of firstParsedResult */}
-            {props.item && <img src={props.item.preview["1280"]} alt="product" />}
+            {props.item && (
+                <img 
+                    src={isHovered ? props.item.pictures[1]["1280"] : props.item.pictures[0]["1280"]} 
+                    alt="product" 
+                />
+            )}
             {/* display product name of firstParsedResult */}
             {props.item && <p id="price">${props.item.price.priceAmount}</p>}
             {/* display size of firstParsedResult */}
