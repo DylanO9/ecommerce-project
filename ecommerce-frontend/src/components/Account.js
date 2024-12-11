@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { UserContext } from '../context/userContext';
 import { useNavigate } from 'react-router-dom'; // You can use Navigate for redirection after logout
 import '../styles/Account.css';
 
 export default function Account() {
     const { user, logoutUser } = useContext(UserContext); // Destructure both from context
-    const [isLoggedOut, setIsLoggedOut] = React.useState(false);
+    const [isLoggedOut, setIsLoggedOut] = useState(false);
     const navigate = useNavigate();
 
     const handleLogout = () => {

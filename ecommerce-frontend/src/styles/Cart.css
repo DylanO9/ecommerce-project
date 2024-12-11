@@ -1,0 +1,177 @@
+#cart {
+    display: block;
+    margin: 2rem auto;
+    max-width: 1280px;
+    min-height: 100vh;
+}
+
+#cart h1 {
+    text-align: center;
+}
+
+#cart-information {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#cart-items {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.cart-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    margin: 1rem;
+}
+
+.cart-item img {
+
+}
+
+.cart-item p {
+    margin: .5rem;
+}
+
+.cart-item h3 {
+    margin: 0;
+}
+
+.cart-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    /* I want this button at the bottom of the container */
+    align-self: flex-end;
+}
+
+.cart-item button:hover {
+    background-color: #d32f2f;
+}
+
+.cart-item button:active {
+    background-color: #b71c1c;
+}
+
+.cart-item button:focus {
+    outline: none;
+}
+
+.cart-item button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cart-item button:disabled:hover {
+    background-color: #ccc;
+}
+
+.cart-item button:disabled:active {
+    background-color: #ccc;
+}
+
+#cart-total {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    height: 35vh;
+}
+
+#cart-total h2 {
+    margin: 0;
+    border-bottom: 1px black solid;
+    width: 100%;
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+#cart-total h3 {
+    margin: 0;
+}
+
+#cart-total p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.cart-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.cart-value {
+    text-align: right;
+    font-size: 1.1rem;
+}
+
+#cart-total button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+#cart-total button:hover {
+    background-color: #388e3c;
+}
+
+#cart-total button:active {
+    background-color: #2e7d32;
+}
+
+#cart-total button:focus {
+    outline: none;
+}
+
+#cart-total button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#cart-total button:disabled:hover {
+    background-color: #ccc;
+}
+
+#cart-total button:disabled:active {
+    background-color: #ccc;
+}
+

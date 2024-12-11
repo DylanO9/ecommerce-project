@@ -4,22 +4,23 @@ import React, { createContext, useState, useEffect } from 'react';
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-    const [user, setUser] = useState(null); // Default user state is null
+    const [user, setUser] = useState(null); 
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [loading, setLoading] = useState(true); // New loading state
 
-    // You can initialize user data here if needed (e.g., from localStorage)
     useEffect(() => {
         const savedUser = localStorage.getItem('user');
         if (savedUser) {
             setUser(JSON.parse(savedUser));
             setIsAuthenticated(true);
         }
+        setLoading(false); // Context is now ready
     }, []);
 
     const loginUser = (userData) => {
         setUser(userData);
         setIsAuthenticated(true);
-        localStorage.setItem('user', JSON.stringify(userData)); // Optionally save user data to localStorage
+        localStorage.setItem('user', JSON.stringify(userData));
     };
 
     const logoutUser = () => {
@@ -27,6 +28,10 @@ export const UserProvider = ({ children }) => {
         setIsAuthenticated(false);
         localStorage.removeItem('user');
     };
+
+    if (loading) {
+        return <div>Loading...</div>; // Optionally show a loader
+    }
 
     return (
         <UserContext.Provider value={{ user, isAuthenticated, loginUser, logoutUser }}>

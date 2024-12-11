@@ -13,6 +13,21 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Get all cart items for a specific user_id
+router.get('/:user_id', async (req, res) => {
+    try {
+        const { user_id } = req.params;
+        const result = await pool.query('SELECT * FROM Cart WHERE user_id = $1', [user_id]);
+        if (result.rows.length === 0) {
+            return res.status(404).send('Cart not found');
+        }
+        res.json(result.rows[0]);
+    } catch (error) {
+        console.error('Error fetching cart items for user:', error);
+        res.status(500).send('Server error');
+    }
+});
+
 // 2. Push a new item to the cart with item_ids being a integer[]
 router.post('/', async (req, res) => {
     try {

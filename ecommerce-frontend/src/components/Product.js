@@ -13,17 +13,26 @@ export default function Product() {
         console.log(fp);
         console.log(user);
         // Post request to add item to cart
-        fetch('http://localhost:3001/api/cart/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                user_id: user.user_id,
-                item_ids: fp.id,
-                status: 'active',
-            }),
-        })
+        // fetch('http://localhost:3001/api/cart/', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         user_id: user.user_id,
+        //         item_ids: fp.id,
+        //         status: 'active',
+        //     }),
+        // })
+        // instead of adding through api call, you can add to local storage
+        let cart = localStorage.getItem('cart');
+        if (!cart) {
+            cart = [];
+        } else {
+            cart = JSON.parse(cart);
+        }
+        cart.push(fp);
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
     return (
         <main id="product">
