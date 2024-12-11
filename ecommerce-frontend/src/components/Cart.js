@@ -32,13 +32,22 @@ export default function Cart() {
             let total = subtotal + shipping - discount;
             total = total.toFixed(2);
             document.getElementById('cart-total-number').innerText = `$${total}`;
-            document.getElementById('subtotal').innerText = `$${subtotal}`;
+            document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
             document.getElementById('shipping-cost').innerText = `$${shipping.toFixed(2)}`;
             document.getElementById('discount').innerText = `-$${discount.toFixed(2)}`;
         }
         calculateTotal();
     }
     , [cart]);
+
+    const removeItem = (index) => {
+        return () => {
+            let newCart = cart.slice();
+            newCart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(newCart));
+            setCart(newCart);
+        }
+    }
 
     return (
         <main id="cart">
@@ -52,7 +61,7 @@ export default function Cart() {
                             <section className="cart-item-info">
                                 <p>${item.price.priceAmount}</p>
                                 <p>Size {item.sizes[0]}</p>
-                                <button>Remove</button>
+                                <button onClick={removeItem(index)}>Remove</button>
                             </section>
                         </section>
                     ))}
@@ -60,21 +69,21 @@ export default function Cart() {
                 <section id="cart-total">
                     <h2>Transaction</h2>
                     <ul>
-                        <li class="cart-row">
-                            <span class="cart-label">Subtotal</span>
-                            <span class="cart-value" id="subtotal"></span>
+                        <li className="cart-row">
+                            <span className="cart-label">Subtotal</span>
+                            <span className="cart-value" id="subtotal"></span>
                         </li>
-                        <li class="cart-row">
-                            <span class="cart-label">Discount</span>
-                            <span class="cart-value" id="discount"></span>
+                        <li className="cart-row">
+                            <span className="cart-label">Discount</span>
+                            <span className="cart-value" id="discount"></span>
                         </li>
-                        <li class="cart-row">
-                            <span class="cart-label">Shipping</span>
-                            <span class="cart-value" id="shipping-cost"></span>
+                        <li className="cart-row">
+                            <span className="cart-label">Shipping</span>
+                            <span className="cart-value" id="shipping-cost"></span>
                         </li>
-                        <li class="cart-row">
-                            <span class="cart-label">Total</span>
-                            <span class="cart-value" id="cart-total-number"></span>
+                        <li className="cart-row">
+                            <span className="cart-label">Total</span>
+                            <span className="cart-value" id="cart-total-number"></span>
                         </li>
                     </ul>
                     <button>Checkout</button>

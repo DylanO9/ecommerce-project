@@ -33,6 +33,7 @@ export default function Product() {
         }
         cart.push(fp);
         localStorage.setItem('cart', JSON.stringify(cart));
+        console.log(cart);
     }
     return (
         <main id="product">
